@@ -3,26 +3,97 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>website title</title>
+    <title>gsgw characters</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body style="background-color: beige;">
-    <div style="background-color: darkgray;">
-        <h1>Actual title on page</h1>
-        <h2>smaller title</h2>
 
-        <div id="container">
-            <p>list</p>
-            <p>of</p>
-            <p>things</p>
+        <nav class="topnav" style="overflow: hidden; background-color: #e9e9e9;">
+        <a class="active" onclick="showPage('home')" href="#home" style="float: left; display: block; color: black; text-align: center; padding: 14px 16px; text-decoration: none; font-size: 17px;">Home</a>
+        <a href="#characters" onclick="showPage('about')" style="float: left; display: block; color: black; text-align: center; padding: 14px 16px; text-decoration: none; font-size: 17px;">Characters</a>
+        <a href="#contact" onclick="showPage('contact')" style="float: left; display: block; color: black; text-align: center; padding: 14px 16px; text-decoration: none; font-size: 17px; ">Contact</a>
+        <input type="text" placeholder="Search.." style="float: right;padding: 6px;border: none;margin-top: 8px;margin-right: 16px;font-size: 17px;">
+    </nav>
+
+<div id="home" class="page">
+    <div style="background-color: rgb(245, 239, 239); border: 10px;">
+        <h1 style="border-color: black; background-color: cadetblue; border: 10px;
+         font-family:monospace; color: whitesmoke; text-shadow: black;
+         word-spacing: 2px; text-align: center; padding: min(5em, 2%); font-size: 35px;">
+         Get to know our best agents! 
+        </h1>
+        <h2 style="color: rgb(0, 0, 0); font-family: monospace; padding: min(5em, 2%); font-size: 25px; display: block; background-color: white;">Disaster Management Bureau AKA DMB</h2>
+
+        <div id="container" style="padding: min(5em, 2%);">
+            <p>The disasters management bureau is a government run company that keeps civilians safe from disasters and strives to eliminate them. </p>
+            <p>The DMB also keeps dangerous disasters under control and takes care of greedy companies that try to take advantage of these awful things.</p>
+            <p> 
+                <a href="#join" style="float: left; display: block; background-color: rgb(245, 239, 239); color: black; text-align: center; padding-right: 20px; font-size: 17px;padding-bottom: 5px; ">Click here to join the good side.</a></p>
         </div>
         </div>
+</div>
+
+<div id="about" class="page" style="display:none;">
+        <div style="border: 5 solid black; background-color: lightcyan; ">
+        <h2 style="padding: min(5em, 2%); font-size: 50px; font-family: monospace;">Agent Choi</h2>
+        <div style="display: flex;  justify-content: center;">
+        <p style="text-align: justify; font-family: monospace; font-size: 15px; padding: min(5em, 2%);">Agent Choi is a member of the Black Tortoise Team 1, that takes on different disasters and saves civilians. 
+            He is very private about his personal life and not much is known about him, not even his real first and/or last name. He uses a spiritual sword and a dokkaebi flame when he fights disasters.
+        </p>
+        <img width="165" src="img/agent-choi.webp" alt="Agent Choi" 
+        style="float:right; display:block; padding: min(5em, 5%); " />
         
-    <h2>picture from the 'img' folder</h2>
-    <img src="img/IKEA-muki.avif" alt="IKEA-muki" />
+       </div>
+       </div>
+       <div style="border: 5 solid black; background-color: rgb(224, 255, 237); ">
+        <h2 style="padding: min(5em, 2%); font-size: 50px; font-family: monospace;">Agent Bronze</h2>
+        <div style="display: flex;  justify-content: center;">
+        <p style="text-align: justify; font-family: monospace; font-size: 15px; padding: min(5em, 2%);">Agent Bronze is a member of the Black Tortoise Team 1, that takes on different disasters and saves civilians. His real name is Ryu Jaekwan. He got caught into a 
+            Annihilation-Sanctioned disaster when he was still in high school and that shaped his whole life, making him want to work for the Disaster Management Bureau. Before he was granted the permission to work at the Bureau, he worked at a low-class disaster bookstore, which made him extremely proficient in talismans.
+        </p>
+        <img width="165" src="img/ryu_jaekwan.webp" alt="Agent Bronze" 
+        style="float:right; display:block; padding: min(5em, 5%); " />
+        
+       </div>
+       </div>
+</div>
+
+<div id="contact" class="page" style="display:none;">
+    <h3>Order our newsletter to keep up to date with disaster news!</h3>
+
+    <form onsubmit="openForm(event)" style="position: relative;">
+        <p>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="personname">
+        </p>
+        <p>
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" name="mail">
+        </p>
+        
+        <p class="button">
+            <button type="submit">Order</button>
+            <span class="popuptext" id="myPopUp" 
+            style="visibility: hidden;width: 160px;background-color: #555;color: #fff;
+            text-align: center;border-radius: 6px;padding: 8px 0;position: absolute;z-index: 1;bottom: 155%;left: 50%;
+            margin-left: -80px;"> 
+            Newsletter has been ordered!
+        </span> 
+        </p>
+
+         
+
+    </form>
+</div>
+
+
+
+    
+       
 
     <p>basic text, under a table of things</p>
-    <table>
+    <table style="background-color: cadetblue; border: 1px solid black;
+    margin-bottom: 5px;">
         <tr>
             <th>big</th>
             <th>words</th>
@@ -74,21 +145,37 @@
         
     </ul>
 
-    <h3>Form under here, can send shit but now it sends to a course site, doesnt work</h3>
+    
 
-    <form action="https://jastpa.utugit.fi/cats/order.html" method="GET">
-        <p>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="personname">
-        </p>
-        <p>
-            <label for="mail">Email:</label>
-            <input type="email" id="mail" name="mail">
-        </p>
-        
-        <p class="button">
-            <button type="submit">Order</button>
-        </p>
-    </form>
-  </body>
+    
+
+    <footer style="font-family: fantasy; color: deeppink;">This website was made by me, the allpowerful wizard of webdesign!</footer>
+
+<script>
+
+function openForm(event) {
+    event.preventDefault(); 
+    var popup = document.getElementById("myPopUp");
+    popup.style.visibility = "visible";
+
+    
+    setTimeout(() => {
+        popup.style.visibility = "hidden";
+    }, 3000);
+}
+
+function showPage(pageId) {
+  const pages = document.querySelectorAll('.page');
+  pages.forEach(p => p.style.display = 'none'); // piilota kaikki
+  document.getElementById(pageId).style.display = 'block'; // näytä oikea
+}
+
+</script>
+   
+
+</body>
+
+   
+
 </html>
+
